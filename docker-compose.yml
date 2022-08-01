@@ -20,7 +20,7 @@ services:
       NETHERMIND_NETWORKCONFIG_DISCOVERYPORT: 30804
       NETHERMIND_NETWORKCONFIG_P2PPORT: 30804
       NETHERMIND_JSONRPCCONFIG_ADDITIONALRPCURLS: "http://0.0.0.0:8551|http;ws|net;eth;subscribe;engine;web3;client"
-      LOG: DEBUG
+      LOG: INFO
       EXTRA_OPTS: ""
     ports:
       - "30804:30804/udp"
