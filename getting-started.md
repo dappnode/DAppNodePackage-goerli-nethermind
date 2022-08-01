@@ -1,7 +1,9 @@
-### Welcome, nodler!
+Goerli Nethermind (Execution Client)
+Goerli is ready for the merge!
 
-This is your Nethermind node. You are now supporting the Ethereum network by running a full node. 
+There are now two APIs in the Geth Execution Client:
 
-* If you want to learn more on how Nethermind is built and why, please check their website: [nethermind.io](https://nethermind.io/)
-* Join their community in [Gitter](https://gitter.im/nethermindeth/nethermind)
-* And of course, make sure you join our DAppNode community in our [Forum](https://forum.dappnode.io) or [Discord](https://discord.dappnode.io)
+1. RPC API `http://nethermind-goerli.public.dappnode:8551`. Use this one to query transactions on your node and connect to your web3 wallet.
+2. Engine API `http://nethermind-goerli.public.dappnode:8551`. Use this one to connect your Beacon Chain (Consensus Layer) client.
+
+After the merge, if your Execution Client is not connected to a Consensus Layer client, you won't be able to use it to query the blockchain nor to connect it to your wallet!
