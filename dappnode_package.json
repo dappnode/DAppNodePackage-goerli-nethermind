@@ -1,5 +1,5 @@
 {
-  "name": "nethermind-goerli.public.dappnode.eth",
+  "name": "goerli-nethermind.public.dappnode.eth",
   "version": "1.0.9",
   "upstreamVersion": "1.13.6",
   "shortDescription": "Nethermind Ethereum client",

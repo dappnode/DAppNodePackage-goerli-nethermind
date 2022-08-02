@@ -5,7 +5,7 @@ services:
       context: .
       args:
         UPSTREAM_VERSION: 1.13.6
-    image: "nethermind.nethermind-goerli.public.dappnode.eth:1.0.9"
+    image: "nethermind.goerli-nethermind.public.dappnode.eth:1.0.9"
     restart: unless-stopped
     security_opt:
       - "seccomp:unconfined"
