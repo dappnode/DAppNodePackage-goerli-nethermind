@@ -1,5 +1,5 @@
 {
-  "name": "goerli-nethermind.public.dappnode.eth",
+  "name": "goerli-nethermind.dnp.dappnode.eth",
   "version": "1.0.9",
   "upstreamVersion": "1.13.6",
   "shortDescription": "Nethermind Ethereum client",
@@ -31,9 +31,9 @@
   "upstreamArg": "UPSTREAM_VERSION",
   "categories": ["Blockchain"],
   "links": {
-    "endpoint": "http://nethermind-goerli.public.dappnode:8545",
-    "API engine endpoint":"http://nethermind-goerli.public.dappnode:8551",
-    "homepage": "https://github.com/dappnode/DAppNodePackage-nethermind#readme"
+    "homepage": "https://github.com/dappnode/DAppNodePackage-nethermind#readme",
+    "api": "http://goerli-nethermind.dappnode:8545",
+    "api-engine": "http://goerli-nethermind.dappnode:8551"
   },
   "repository": {
     "type": "git",
@@ -45,5 +45,6 @@
   "bugs": {
     "url": "https://github.com/dappnode/DAppNodePackage-Goerli-Nethermind/issues"
   },
-  "license": "LGPL-3.0"
+  "license": "LGPL-3.0",
+  "globalEnvs": [{ "envs": ["CONSENSUS_CLIENT_PRATER"], "services": ["nethermind"] }]
 }
