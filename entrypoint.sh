@@ -27,7 +27,7 @@ esac
 JWT=$(cat $JWT_PATH)
 curl -X POST "http://my.dappnode/data-send?key=jwt&data=${JWT}"
 
-exec Nethermind.Runner --config goerli \
+exec /nethermind/Nethermind.Runner --config goerli \
   --JsonRpc.Enabled=true \
   --JsonRpc.JwtSecretFile=${JWT_PATH} \
   --Init.BaseDbPath=/data \
