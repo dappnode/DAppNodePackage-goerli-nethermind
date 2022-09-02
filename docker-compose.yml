@@ -5,7 +5,7 @@ services:
       context: .
       args:
         UPSTREAM_VERSION: 1.14.0
-    image: "nethermind.goerli-nethermind.public.dappnode.eth:1.0.9"
+    image: "nethermind.goerli-nethermind.dnp.dappnode.eth:1.0.9"
     restart: unless-stopped
     security_opt:
       - "seccomp:unconfined"
@@ -19,7 +19,8 @@ services:
       NETHERMIND_INITCONFIG_WEBSOCKETSENABLED: "true"
       NETHERMIND_NETWORKCONFIG_DISCOVERYPORT: 30804
       NETHERMIND_NETWORKCONFIG_P2PPORT: 30804
-      NETHERMIND_JSONRPCCONFIG_ADDITIONALRPCURLS: "http://0.0.0.0:8551|http;ws|net;eth;subscribe;engine;web3;client"
+      NETHERMIND_JSONRPCCONFIG_ENGINEHOST: 0.0.0.0
+      NETHERMIND_JSONRPCCONFIG_ENGINEPORT: 8551
       LOG: INFO
       EXTRA_OPTS: ""
     ports:
