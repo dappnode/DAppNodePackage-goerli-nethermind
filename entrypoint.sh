@@ -30,6 +30,8 @@ curl -X POST "http://my.dappnode/data-send?key=jwt&data=${JWT}"
 exec /nethermind/Nethermind.Runner --config goerli \
   --JsonRpc.Enabled=true \
   --JsonRpc.JwtSecretFile=${JWT_PATH} \
+  --Init.WebSocketsEnabled true \
+  --JsonRpc.WebSocketsPort 8546 \
   --Init.BaseDbPath=/data \
   --Init.LogDirectory=/data/logs \
   $EXTRA_OPTS
