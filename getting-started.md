@@ -9,3 +9,7 @@ There are now two RPC APIs in Execution Clients:
 
 - If your Execution Client is not connected to a Consensus Layer client, you won't be able to keep it synced, nor use it to query the blockchain, nor will you be able to connect your wallet to it!
 - All Staking Management has a new home in the Comprehensive [StakersUI](http://my.dappnode/#/stakers/prater)
+
+If you have enabled the Nethermind UI: You can access by clicking [Nethermind UI](http://goerli-nethermind.dappnode:8551/healthchecks-ui) Or the UI link below.
+If you want to enable it you can do it if you go to config section and enable the below option.
+
