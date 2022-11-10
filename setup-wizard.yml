@@ -133,7 +133,7 @@ fields:
     description: >-
       Upload your desired configuration file. You can get more info about how to configure nethermind [here](https://nethermind.readthedocs.io/en/latest/configuration.html) and also you can find some examples [here](https://github.com/NethermindEth/nethermind/tree/master/src/Nethermind/Nethermind.Runner/configs)
     if: { "mode": { "enum": ["custom"] } }
-    - id: EnableUI
+  - id: EnableUI
     target:
       type: environment
       name: NETHERMIND_HEALTHCHECKSCONFIG_UIENABLED
