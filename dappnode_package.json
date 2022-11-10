@@ -31,8 +31,9 @@
   "upstreamArg": "UPSTREAM_VERSION",
   "categories": ["Blockchain"],
   "links": {
-    "endpoint": "http://nethermind-goerli.dappnode:8545",
-    "engineAPI": "http://nethermind-goerli.dappnode:8551",
+    "ui": "http://goerli-nethermind.dappnode:8551/healthchecks-ui",
+    "endpoint": "http://goerli-nethermind.dappnode:8545",
+    "engineAPI": "http://goerli-nethermind.dappnode:8551",
     "homepage": "https://github.com/dappnode/DAppNodePackage-goerli-nethermind#readme"
   },
   "repository": {

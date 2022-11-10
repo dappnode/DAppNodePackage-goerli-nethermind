@@ -32,6 +32,7 @@ exec /nethermind/Nethermind.Runner --config goerli \
   --JsonRpc.JwtSecretFile=${JWT_PATH} \
   --Init.WebSocketsEnabled true \
   --JsonRpc.WebSocketsPort 8546 \
+  --HealthChecks.Enabled true \
   --Init.BaseDbPath=/data \
   --Init.LogDirectory=/data/logs \
   $EXTRA_OPTS
