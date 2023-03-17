@@ -1,14 +1,10 @@
 ﻿name: "Test Build"
 on:
-  push:
+  pull_request:
     branches:
       - "master"
       - "main"
       - "v[0-9]+.[0-9]+.[0-9]+"
-
-    paths-ignore:
-      - "README.md"
-
 jobs:
   build-test:
     runs-on: ubuntu-latest
