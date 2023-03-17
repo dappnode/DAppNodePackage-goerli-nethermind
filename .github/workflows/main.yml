@@ -1,6 +1,6 @@
 name: "Main"
 on:
-  pull_request:
+  workflow_dispatch:
   push:
     branches:
       - "master"
@@ -11,18 +11,9 @@ on:
       - "README.md"
 
 jobs:
-  build-test:
-    runs-on: ubuntu-latest
-    name: Build test
-    if: github.event_name != 'push'
-    steps:
-      - uses: actions/checkout@v2
-      - run: docker-compose build
-
   release:
     name: Release
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
