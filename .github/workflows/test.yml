@@ -1,0 +1,23 @@
+﻿name: "Test"
+on:
+  pull_request:
+    branches:
+      - "master"
+      - "v[0-9]+.[0-9]+.[0-9]+"
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    name: Build test
+    steps:
+      - uses: actions/checkout@v2
+      - run: npx @dappnode/dappnodesdk build --skip_save
+
+  e2e-test:
+    runs-on: prater
+    needs: build-test
+    name: End to end tests
+    steps:
+      - uses: actions/checkout@v2
+      - run: npx @dappnode/dappnodesdk@latest github-action test-end-to-end --errorLogsTimeout 120 --healthCheckUrl http://goerli-nethermind.dappnode:8545/ --network prater
+        env:
+           VALIDATOR_INDEX: ${{ secrets.PRATER_VALIDATOR_INDEX }}
